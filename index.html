@@ -1,323 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Matheus</title>
-
-    <!-- Fonte -->
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" class="foto-perfil">
-
-     <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header class="hero">
+        <div class="language-switcher">
+            <button id="lang-btn">PT</button>
+        </div>
+        <div class="theme-switcher">
+            <button id="theme-btn">
+                <img src="assets/sol.svg" alt="Modo claro" id="theme-icon">
+            </button>
+        </div>
         <div class="profile-container">
-            <img src="assets/fotoHome.jpg" alt="Foto do Home" class="profile-pic">
-        </div> 
-        <h1>Matheus Leite Rodrigues</h1>
-        <h3>Desenvolvedor em formação</h3>
+            <img src="assets/fotoHome.jpg" alt="Foto do Matheus" class="profile-pic">
+        </div>
+        <div class="hero-text">
+            <h1 data-lang="hero-title">Matheus Leite Rodrigues</h1>
+            <h3 data-lang="hero-subtitle">Desenvolvedor em formação</h3>
+        </div>
     </header>
 
     <section id="sobre">
-        <h2>Sobre mim</h2>
-        <p>Meu nome é Matheus e sou estudante de Ciência da Computação com formação técnica
-             em Desenvolvimento de Jogos Digitais. Desde cedo me interessei por tecnologia
-              e pela forma como a programação pode transformar ideias em soluções reais.
-              <br>
-              <br>
-            Tenho experiência com lógica de programação, modelagem de dados, desenvolvimento web,
-             desenvolvimento de softwares e desenvolvimento de jogos digitais,
-              tambem tenho uma base em inteligencia artificil e machine learning e  e fundamentos de sistemas,
-             e estou sempre em busca de aprender novas ferramentas e linguagens. Atualmente, atuo como 
-             assistente financeiro, onde desenvolvi um bom domínio de organização, atenção aos detalhes
-              e uso do Excel para otimizar processos, habilidades que também aplico nos meus projetos de tecnologia.
-              <br>
-              <br>
-            Sou uma pessoa dedicada, comunicativa e curiosa, com facilidade 
-            para aprender e me adaptar a novos desafios. Estou em busca de uma oportunidade de estágio 
-            em programação para aprimorar minhas habilidades técnicas, ganhar experiência prática e contribuir
-             com soluções criativas e eficientes no mundo da tecnologia.</p>
-
-             <a href="assets/curriculo.pdf" download="Matheus-CV.pdf" class="btn-curriculo">
+        <h2 data-lang="about-title">Sobre mim</h2>
+        <p data-lang="about-text">
+            Meu nome é Matheus e sou estudante de Ciência da Computação, com formação técnica em Desenvolvimento de Jogos Digitais. Desde cedo me interessei por tecnologia e pela forma como a programação pode transformar ideias em soluções reais.
+            <br><br>
+            Tenho experiência com lógica de programação, modelagem de dados, desenvolvimento web, desenvolvimento de softwares e desenvolvimento de jogos digitais. Também possuo uma base em Inteligência Artificial, Machine Learning e fundamentos de sistemas, além de estar sempre em busca de aprender novas ferramentas e linguagens. Atualmente, atuo como assistente financeiro, onde desenvolvi bom domínio de organização, atenção aos detalhes e uso do Excel para otimizar processos, habilidades que também aplico nos meus projetos de tecnologia.
+            <br><br>
+            Sou uma pessoa dedicada, comunicativa e curiosa, com facilidade para aprender e me adaptar a novos desafios. Busco uma oportunidade de estágio em programação para aprimorar minhas habilidades técnicas, ganhar experiência prática e contribuir com soluções criativas e eficientes no mundo da tecnologia.
+        </p>
+        <div class="cv-buttons">
+            <a href="assets/curriculopt.pdf" download="Matheus-CV.pdf" target="_blank" class="btn-curriculopt">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" style="margin-right:8px; vertical-align:middle;">
-                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5.5L10.5 0H4zM10 1.5L13.5 5H10V1.5zM4 1h6v4a1 1 0 0 0 1 1h4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5.5L10.5 0H4zM10 1.5L13.5 5H10V1.5zM4 1h6v4a1 1 0 0 0 1 1h4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
                 </svg>
-                Baixar Currículo
-             </a>
+                <span data-lang="btn-cvpt">Baixar Currículo (PT)</span>
+            </a>
+            <a href="assets/curriculoen.pdf" download="Matheus-CV.pdf" target="_blank" class="btn-curriculoen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" style="margin-right:8px; vertical-align:middle;">
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5.5L10.5 0H4zM10 1.5L13.5 5H10V1.5zM4 1h6v4a1 1 0 0 0 1 1h4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                </svg>
+                <span data-lang="btn-cven">Baixar Currículo (EN)</span>
+            </a>
+        </div>
+    </section>
+    
+<section id="minha-jornada" class="journey-section">
+    <div class="container">
+        <div class="journey-header">
+            <h2 data-lang="journey-title">Minha Jornada</h2>
+            <p class="journey-subtitle" data-lang="journey-subtitle">Minha Jornada Além do Código: Como a Curiosidade Moldou Minha Carreira Tech.</p>
+        </div>
+
+        <div class="journey-timeline">
+            
+            <div class="timeline-phase">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <h3 data-lang="journey-phase1-title">Curioso desde pequeno</h3>
+                </div>
+                <div class="phase-content">
+                    <p data-lang="journey-phase1-text">Desde criança sempre fui muito curioso com tecnologia. Gostava de explorar o computador e entender como os jogos funcionavam. Ainda novo, cheguei a entrar na plataforma da Unity, onde testava e montava jogos pré-programados.</p>
+                    <div class="phase-memories">
+                        <span class="memory" data-lang="journey1-memory1">Primeiros contatos com jogos</span>
+                        <span class="memory" data-lang="journey1-memory2">Desmontando eletrônicos</span>
+                        <span class="memory" data-lang="journey1-memory3">Descobrindo a programação</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-phase">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <h3 data-lang="journey-phase2-title">O início da jornada</h3>
+                </div>
+                <div class="phase-content">
+                    <p data-lang="journey-phase2-text">Em 2021, comecei o técnico em Programação de Jogos Digitais na FSCAP, onde aprendi lógica, design e o processo de criação de jogos. No ano seguinte, em 2022, comecei a desenvolver meus próprios projetos na Unreal Engine, o que me ajudou a colocar em prática tudo que aprendi. Em 2023 concluí o ensino médio, já decidido a seguir carreira na área de tecnologia.</p>
+                    <div class="phase-learning">
+                        <span class="skill" data-lang="journey2-memory1">Lógica de Programação</span>
+                        <span class="skill" data-lang="journey2-memory2">Design de Jogos</span>
+                        <span class="skill" data-lang="journey2-memory3">Unreal Engine</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-phase">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <h3 data-lang="journey-phase3-title">Faculdade e novas experiências</h3>
+                </div>
+                <div class="phase-content">
+                    <p data-lang="journey-phase3-text">Em 2024, iniciei Ciência da Computação na UNICID, aprofundando conhecimentos em estruturas de dados e desenvolvimento de software.</p>
+                    <p data-lang="journey-phase3-subtitle">Também tive a oportunidade de compartilhar conhecimento, ministrando palestras sobre tecnologia para alunos do ensino fundamental.</p>
+                </div>
+            </div>
+
+            <div class="timeline-phase">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <h3 data-lang="journey-phase4-title">Aperfeiçoamento e Foco</h3>
+                </div>
+                <div class="phase-content">
+                    <p data-lang="journey-phase4-text">Atualmente, busco evoluir constantemente através de cursos na Alura e estudos independentes. Gosto de aprender novas linguagens e explorar diferentes áreas da computação, sempre com foco em me tornar um profissional completo.</p>
+                    <div class="current-focus">
+                        <span class="focus-item" data-lang="journey4-memory1">Estudos Contínuos</span>
+                        <span class="focus-item" data-lang="journey4-memory2">Novas Tecnologias</span>
+                        <span class="focus-item" data-lang="journey4-memory3">Preparação para o Mercado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-phase">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <h3 data-lang="journey-phase5-title">Meus planos para o futuro</h3>
+                </div>
+                <div class="phase-content">
+                    <p data-lang="journey-phase4-text">Meu objetivo é seguir crescendo como programador, desenvolvendo projetos que unam criatividade e tecnologia. Quero trabalhar em equipes que incentivem inovação, aprender com profissionais experientes e, no futuro, contribuir com soluções que impactem positivamente a vida das pessoas.</p>
+                    <div class="future-vision">
+                        <span class="vision-pill" data-lang="journey5-memory1">Arquitetura em nuvem</span>
+                        <span class="vision-pill" data-lang="journey5-memory2">IA/ML</span>
+                        <span class="vision-pill" data-lang="journey5-memory3">Soluções Escaláveis</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </section>
 
-<section id="tecnologias">
-    <h2>Tecnologias</h2>
-    <div class="marquee">
-        <div class="marquee-content">
-            <!-- Tecnologias -->
-            <div class="tech-item">
-                <img src="assets/html5.svg" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/css3.svg" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/javascript.svg" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/java.svg" alt="Java">
-                <span>Java</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/sql.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/cpp.svg" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/kotlin.svg" alt="Kotlin">
-                <span>Kotlin</span>
-            </div>
 
-            <!-- Repetição para roleta infinita -->
-            <div class="tech-item">
-                <img src="assets/html5.svg" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/css3.svg" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/javascript.svg" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/java.svg" alt="Java">
-                <span>Java</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/sql.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/cpp.svg" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/kotlin.svg" alt="Kotlin">
-                <span>Kotlin</span>
-            </div>
-            <!-- Repetição para roleta infinita -->
-            <div class="tech-item">
-                <img src="assets/html5.svg" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/css3.svg" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/javascript.svg" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/java.svg" alt="Java">
-                <span>Java</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/sql.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/cpp.svg" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/kotlin.svg" alt="Kotlin">
-                <span>Kotlin</span>
+
+    <section id="tecnologias">
+        <h2 data-lang="tech-title">Tecnologias</h2>
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="tech-item"><img src="assets/html5.svg" alt="HTML"><span>HTML</span></div>
+                <div class="tech-item"><img src="assets/css3.svg" alt="CSS"><span>CSS</span></div>
+                <div class="tech-item"><img src="assets/javascript.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="tech-item"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
+                <div class="tech-item"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
+                <div class="tech-item"><img src="assets/sql.svg" alt="SQL"><span>SQL</span></div>
+                <div class="tech-item"><img src="assets/cpp.svg" alt="C++"><span>C++</span></div>
+                <div class="tech-item"><img src="assets/kotlin.svg" alt="Kotlin"><span>Kotlin</span></div>
+                <div class="tech-item"><img src="assets/html5.svg" alt="HTML"><span>HTML</span></div>
+                <div class="tech-item"><img src="assets/css3.svg" alt="CSS"><span>CSS</span></div>
+                <div class="tech-item"><img src="assets/javascript.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="tech-item"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
+                <div class="tech-item"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
+                <div class="tech-item"><img src="assets/sql.svg" alt="SQL"><span>SQL</span></div>
+                <div class="tech-item"><img src="assets/cpp.svg" alt="C++"><span>C++</span></div>
+                <div class="tech-item"><img src="assets/kotlin.svg" alt="Kotlin"><span>Kotlin</span></div>
+                <div class="tech-item"><img src="assets/html5.svg" alt="HTML"><span>HTML</span></div>
+                <div class="tech-item"><img src="assets/css3.svg" alt="CSS"><span>CSS</span></div>
+                <div class="tech-item"><img src="assets/javascript.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="tech-item"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
+                <div class="tech-item"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
+                <div class="tech-item"><img src="assets/sql.svg" alt="SQL"><span>SQL</span></div>
+                <div class="tech-item"><img src="assets/cpp.svg" alt="C++"><span>C++</span></div>
+                <div class="tech-item"><img src="assets/kotlin.svg" alt="Kotlin"><span>Kotlin</span></div>
             </div>
         </div>
-    </div>
 
-    <h2>Ferramentas</h2>
-    <div class="marquee">
-        <div class="marquee-content">
-            <!-- Ferramentas -->
-            <div class="tech-item">
-                <img src="assets/nodejs.svg" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/figma.svg" alt="Figma">
-                <span>Figma</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/vscode.svg" alt="VS Code">
-                <span>VS Code</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/unity.svg" alt="Unity">
-                <span>Unity</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/intellij.svg" alt="IntelliJ">
-                <span>IntelliJ</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/androidstudio.svg" alt="Android Studio">
-                <span>Android Studio</span>
-            </div>
-
-            <!-- Repetição para roleta infinita -->
-            <div class="tech-item">
-                <img src="assets/nodejs.svg" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/figma.svg" alt="Figma">
-                <span>Figma</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/vscode.svg" alt="VS Code">
-                <span>VS Code</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/unity.svg" alt="Unity">
-                <span>Unity</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/intellij.svg" alt="IntelliJ">
-                <span>IntelliJ</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/androidstudio.svg" alt="Android Studio">
-                <span>Android Studio</span>
-            </div>
-            <!-- Repetição para roleta infinita -->
-            <div class="tech-item">
-                <img src="assets/nodejs.svg" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/figma.svg" alt="Figma">
-                <span>Figma</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/vscode.svg" alt="VS Code">
-                <span>VS Code</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/unity.svg" alt="Unity">
-                <span>Unity</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/intellij.svg" alt="IntelliJ">
-                <span>IntelliJ</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/androidstudio.svg" alt="Android Studio">
-                <span>Android Studio</span>
+        <h2 data-lang="tools-title">Ferramentas</h2>
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="tech-item"><img src="assets/nodejs.svg" alt="Node"><span>Node.js</span></div>
+                <div class="tech-item"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
+                <div class="tech-item"><img src="assets/figma.svg" alt="Figma"><span>Figma</span></div>
+                <div class="tech-item"><img src="assets/vscode.svg" alt="VS Code"><span>VS Code</span></div>
+                <div class="tech-item"><img src="assets/unity.svg" alt="Unity"><span>Unity</span></div>
+                <div class="tech-item"><img src="assets/unreal.svg" alt="Unreal"><span>Unreal</span></div>
+                <div class="tech-item"><img src="assets/intellij.svg" alt="IntelliJ"><span>IntelliJ</span></div>
+                <div class="tech-item"><img src="assets/androidstudio.svg" alt="Android"><span>Android Studio</span></div>
+                <div class="tech-item"><img src="assets/nodejs.svg" alt="Node"><span>Node.js</span></div>
+                <div class="tech-item"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
+                <div class="tech-item"><img src="assets/figma.svg" alt="Figma"><span>Figma</span></div>
+                <div class="tech-item"><img src="assets/vscode.svg" alt="VS Code"><span>VS Code</span></div>
+                <div class="tech-item"><img src="assets/unity.svg" alt="Unity"><span>Unity</span></div>
+                <div class="tech-item"><img src="assets/unreal.svg" alt="Unreal"><span>Unreal</span></div>
+                <div class="tech-item"><img src="assets/intellij.svg" alt="IntelliJ"><span>IntelliJ</span></div>
+                <div class="tech-item"><img src="assets/androidstudio.svg" alt="Android"><span>Android Studio</span></div>
+                <div class="tech-item"><img src="assets/nodejs.svg" alt="Node"><span>Node.js</span></div>
+                <div class="tech-item"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
+                <div class="tech-item"><img src="assets/figma.svg" alt="Figma"><span>Figma</span></div>
+                <div class="tech-item"><img src="assets/vscode.svg" alt="VS Code"><span>VS Code</span></div>
+                <div class="tech-item"><img src="assets/unity.svg" alt="Unity"><span>Unity</span></div>
+                <div class="tech-item"><img src="assets/unreal.svg" alt="Unreal"><span>Unreal</span></div>
+                <div class="tech-item"><img src="assets/intellij.svg" alt="IntelliJ"><span>IntelliJ</span></div>
+                <div class="tech-item"><img src="assets/androidstudio.svg" alt="Android"><span>Android Studio</span></div>
             </div>
         </div>
-    </div>
     </section>
 
     <section id="contato">
-    <h2>Contato</h2>
-    <div class="contato-buttons">
-        <a href="https://www.linkedin.com/in/matheus-leite-3ba008277" target="_blank" class="contato-btn">
-            <img src="assets/linkedin.svg" alt="LinkedIn">
-            LinkedIn
-        </a>
-        <a href="https://github.com/Mthxxx" target="_blank" class="contato-btn">
-            <img src="assets/git.svg" alt="GitHub">
-            GitHub
-        </a>
-        <a href="mailto:ymatheuxx@gmail.com" class="contato-btn">
-            <img src="assets/email.svg" alt="Email">
-            Email
-        </a>
-    </div>
-</section>
-
+        <h2 data-lang="contact-title">Contato</h2>
+        <div class="contato-buttons">
+            <a href="https://www.linkedin.com/in/matheus-leite-3ba008277" target="_blank" class="contato-btn">
+                <img src="assets/linkedin.svg" alt="LinkedIn">
+                LinkedIn
+            </a>
+            <a href="https://github.com/Mthxxx" target="_blank" class="contato-btn">
+                <img src="assets/git.svg" alt="GitHub">
+                GitHub
+            </a>
+            <a href="#" class="contato-btn" id="abrir-modal-contato">
+                <img src="assets/email.svg" alt="Email">
+                Email
+            </a>
+            <a href="https://wa.me/5511972752721?text=Olá" target="_blank" class="contato-btn">
+                <img src="assets/whatsapp.svg" alt="Whatsapp">
+                Whatsapp
+            </a>
+        </div>
+    </section>
 
     <section id="projetos">
-    <h2>Projetos</h2>
+        <h2 data-lang="projects-title">Projetos</h2>
+        <div class="projetos-grid">
+            <div class="projeto-card" data-projeto="1">
+                <img src="assets/projetos/projeto1/java1.png" alt="MTclicker" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj1-title">MTclicker</h3>
+                    <p data-lang="proj1-desc">MTclicker é um autoclicker desenvolvido inteiramente por mim, utilizando a biblioteca JNativeHook e com todos os assets desenhados manualmente para criar uma interface única.</p>
+                </div>
+            </div>
 
-    <!-- Projeto 1: Java -->
-<div class="projeto zoom-hover">
-    <p class="projeto-desc">Projeto em Java <br> 
-        Autoclicker personalizado, onde fiz todos os assets manualmente e toda a programação.</p>
-    <div class="projeto-fotos">
-        <img src="assets/projeto1java.png" alt="Projeto Java">
+            <div class="projeto-card" data-projeto="2">
+                <img src="assets/projetos/projeto2/html3.png" alt="Galeria" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj2-title">Galeria de fotos</h3>
+                    <p data-lang="proj2-desc">Um site especial criado para guardar fotos minhas e da minha namorada, com sistema de login usando banco de dados, efeito de pétalas caindo ao abrir a página e uma galeria personalizada feita por mim.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-projeto="3">
+                <img src="assets/projetos/projeto3/php7.png" alt="Ingressos" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj3-title">Venda de ingressos</h3>
+                    <p data-lang="proj3-desc">Site de venda de ingressos desenvolvido para um trabalho da faculdade, com três categorias — musical, festa universitária e teatro — além de uma lojinha, tudo integrado a um banco de dados para registrar usuários e compras.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-projeto="4">
+                <img src="assets/projetos/projeto4/python1.png" alt="Python" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj4-title">Automações em Python</h3>
+                    <p data-lang="proj4-desc">Automatizações simples desenvolvidas em Python no início do curso, criadas para praticar lógica de programação e resolver tarefas repetitivas de forma rápida e eficiente</p>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-projeto="5">
+                <img src="assets/projetos/projeto5/orkut2.png" alt="Orkut2" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj5-title">Orkut 2</h3>
+                    <p data-lang="proj5-desc">Orkut 2 é um pequeno site criado em uma aula de HTML, com um sistema simples de postagens para testar conceitos básicos de estrutura, formulários e exibição de conteúdo.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-projeto="6">
+                <img src="assets/projetos/projeto6/pato10.png" alt="Ganso" class="projeto-imagem">
+                <div class="projeto-conteudo">
+                    <h3 data-lang="proj6-title">Desktop Goose</h3>
+                    <p data-lang="proj6-desc">Um Desktop Goose personalizado desenvolvido por mim em Python com Pygame, usando sprites próprios, mecânica de perseguição ao mouse, sistema de arbustos explosivos e diversas animações criadas manualmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modal-projeto">
+    <div class="modal-projeto-conteudo">
+        <button class="fechar-modal" onclick="fecharModal()">&times;</button>
+        
+        <div class="modal-info">
+            <!-- Coluna da Imagem + Galeria -->
+            <div class="modal-imagem-container">
+                <img src="" alt="Imagem do Projeto" id="modal-imagem" class="modal-imagem-principal">
+                <div id="modal-galeria" class="galeria-projeto"></div>
+            </div>
+
+            <!-- Coluna do Texto -->
+            <div class="modal-texto">
+                <h2 id="modal-titulo">Título do Projeto</h2>
+                <p id="modal-descricao">Descrição detalhada do projeto.</p>
+            </div>
+        </div>
     </div>
 </div>
-
-<!-- Projeto 2: HTML -->
-<div class="projeto zoom-hover">
-    <p class="projeto-desc">Projeto em HTML <br> 
-        Site que fiz de presente para minha namorada, uma galeria de fotos nossas.</p>
-    <div class="projeto-fotos">
-        <img src="assets/projeto1html.png" alt="Projeto HTML">
+    <div class="modal-overlay" id="modal-contato">
+        <div class="modal-contato">
+            <button class="fechar-modal" id="fechar-modal-contato" data-lang="contact-modal-close">&times;</button>
+            <h2 data-lang="contact-modal-title">Contato</h2>
+            <form id="form-contato" autocomplete="off">
+                <label for="contato-nome" data-lang="contact-modal-name">Nome</label>
+                <input type="text" id="contato-nome" name="nome" required>
+                <label for="contato-telefone" data-lang="contact-modal-phone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{8,15}" maxlength="15" required placeholder="ex: 11940028922">
+                <label for="contato-email" data-lang="contact-modal-email">Email</label>
+                <input type="email" id="contato-email" name="email" required>
+                <label for="contato-motivo" data-lang="contact-modal-reason">Motivo do contato</label>
+                <textarea id="contato-motivo" name="motivo" rows="3" required></textarea>
+                <button type="submit" class="btn-enviar-contato" data-lang="contact-modal-send">Enviar</button>
+            </form>
+            <div id="contato-feedback" style="display:none; margin-top:20px; color:var(--cor-primaria-escura); font-weight:bold;">
+                <span id="contato-spinner" style="display:none; margin-right:8px;"></span>
+                <span id="contato-feedback-text" data-lang="contact-modal-enviar">Enviando...</span>
+            </div>
+        </div>
     </div>
-</div>
 
-<!-- Projeto 3: Python -->
-<div class="projeto">
-    <p class="projeto-desc">Projetos em Python:<br>
-         Pequenas atividades e automações.</p>
-    <div class="projeto-fotos">
-        <img src="assets/projeto1py.png" alt="Python 1">
-        <img src="assets/projeto2py.png" alt="Python 2">
-        <img src="assets/projeto3py.png" alt="Python 3">
-    </div>
-</div>
+<!-- ===== SEÇÃO CERTIFICAÇÕES ===== -->
+<section id="certificacoes">
+    <h2 data-lang="certs-title">Certificações</h2>
+    <div class="certificacoes-grid">
+        
+        <!-- Card 1 -->
+        <div class="cert-card" data-cert="1">
+            <img src="assets/certificados/certificado.jpg" alt="Certificado 1" class="cert-imagem">
+            <div class="cert-conteudo">
+                <h3 data-lang="cert1-title">Em Breve</h3>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cert-card" data-cert="2">
+            <img src="assets/certificados/certificado.jpg" alt="Certificado 2" class="cert-imagem">
+            <div class="cert-conteudo">
+                <h3 data-lang="cert2-title">Em Breve</h3>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cert-card" data-cert="3">
+            <img src="assets/certificados/certificado.jpg" alt="Certificado 3" class="cert-imagem">
+            <div class="cert-conteudo">
+                <h3 data-lang="cert3-title">Em Breve</h3>
+            </div>
+        </div>
 
     </div>
 </section>
 
-
-    <<footer>
-    <div class="footer-links">
-        <a href="#">Política de privacidade</a> |
-        <a href="#">Política de cookies</a> |
-        <a href="#">Termos de uso</a>
+<!-- ===== MODAL CERTIFICAÇÕES ===== -->
+<div class="modal-overlay" id="modal-cert">
+    <div class="modal-cert-conteudo">
+        <button class="fechar-modal" onclick="fecharModalCert()">&times;</button>
+        <img src="" alt="Certificado" id="modal-cert-imagem">
     </div>
-    <p>© 2025 Portfólio - Matheus Leite Rodrigues</p>
-    <p>Endereço: Rua Manuel Leiroz, 400 - São Paulo - SP - CEP: 03735-180</p>
-    <p>Email: <a href="mailto:ymatheuxx@gmail.com">ymatheuxx@gmail.com</a></p>
-</footer>
+</div>
 
+    <footer>
+        <p data-lang="footer-copy">© 2025 Portfólio - Matheus Leite Rodrigues</p>
+        <p data-lang="footer-addr">Endereço: Rua Manuel Leiroz, 400 - São Paulo - SP - CEP: 03735-180</p>
+        <p>
+            Email: <a href="#" id="footer-email-link">ymatheuxx@gmail.com</a>
+            
+
+            Whatsapp: <a href="https://wa.me/5511972752721?text=Olá" target="_blank">+55 11 97275-2721</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

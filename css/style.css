@@ -1080,37 +1080,55 @@ body.dark-mode .cert-conteudo h3 {
     .hero {
         align-items: center;
         height: auto;
-        min-height: 35vh;
-        padding-top: 80px;
-        padding-bottom: 60px;
+        min-height: 20vh;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+    
+    /* Esconde o texto do hero no mobile - vai aparecer abaixo da foto */
+    .hero-text {
+        position: absolute;
+        top: calc(100% + 100px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 5;
     }
     
     .hero h1, .hero h3 {
-        color: var(--cor-branca);
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        color: var(--cor-texto-principal);
+        text-shadow: none;
         text-align: center;
         width: 100%;
     }
 
-    .hero h1 { font-size: 2.2rem; margin-top: 15px; }
-    .hero h3 { font-size: 1.2rem; }
+    .hero h1 { font-size: 1.8rem; margin-top: 10px; }
+    .hero h3 { font-size: 1.1rem; }
 
     .profile-container {
-        bottom: -80px;
+        position: absolute;
+        bottom: auto;
+        top: 100%;
         left: 50%;
-        transform: translateX(-50%);
-        margin-top: 20px;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        margin: 0;
     }
 
     .profile-pic {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         max-width: 90vw;
-        border-width: 4px;
+        border-width: 5px;
+    }
+    
+    /* Aumenta o zoom da foto no mobile */
+    .profile-pic:hover {
+        transform: scale(1.15);
     }
 
     #sobre {
-        margin-top: 140px;
+        margin-top: 180px;
         padding: 0 15px;
     }
 
@@ -1126,13 +1144,13 @@ body.dark-mode .cert-conteudo h3 {
     
     /* Botões tema/idioma */
     .language-switcher {
-        top: 20px;
-        right: 20px;
+        top: 15px;
+        right: 15px;
     }
     
     .theme-switcher {
-        top: 20px;
-        right: 70px;
+        top: 15px;
+        right: 65px;
     }
     
     #theme-btn img {
@@ -1240,27 +1258,44 @@ body.dark-mode .cert-conteudo h3 {
 
 /* ===== CELULARES GRANDES (600px - 767px) ===== */
 @media (max-width: 600px) {
+    .hero {
+        min-height: 18vh;
+        padding-top: 50px;
+        padding-bottom: 15px;
+    }
+    
+    .hero-text {
+        top: calc(100% + 85px);
+    }
+    
+    .hero h1 { font-size: 1.6rem; }
+    .hero h3 { font-size: 1rem; }
+    
     .profile-container {
-        bottom: -40px;
-        padding-top: 0;
-        padding-bottom: 0;
+        transform: translate(-50%, -50%);
     }
+    
     .profile-pic {
-        width: 120px;
-        height: 120px;
-        aspect-ratio: 1/1;
+        width: 160px;
+        height: 160px;
     }
-    .language-switcher,
-    .theme-switcher {
+    
+    /* Zoom maior no mobile */
+    .profile-pic:hover {
+        transform: scale(1.2);
+    }
+    
+    .language-switcher {
         top: 10px;
         right: 10px;
     }
     .theme-switcher {
-        right: 60px;
+        top: 10px;
+        right: 55px;
     }
     
     #sobre {
-        margin-top: 80px;
+        margin-top: 160px;
         padding: 0 5vw;
     }
     
@@ -1301,18 +1336,30 @@ body.dark-mode .cert-conteudo h3 {
 
 /* ===== CELULARES (480px - 599px) ===== */
 @media (max-width: 480px) {
-    .hero h1 { font-size: 1.8rem; }
-    
-    .profile-container {
-        bottom: -70px;
+    .hero {
+        min-height: 15vh;
+        padding-top: 45px;
+        padding-bottom: 10px;
     }
+    
+    .hero-text {
+        top: calc(100% + 75px);
+    }
+    
+    .hero h1 { font-size: 1.5rem; }
+    .hero h3 { font-size: 0.95rem; }
     
     .profile-pic {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
     
-    #sobre { margin-top: 110px; }
+    /* Zoom ainda maior em celulares pequenos */
+    .profile-pic:hover {
+        transform: scale(1.25);
+    }
+    
+    #sobre { margin-top: 150px; }
     
     .tech-item {
         width: 80px;
@@ -1453,15 +1500,20 @@ body.dark-mode .cert-conteudo h3 {
 /* ===== CELULARES PEQUENOS (< 360px) ===== */
 @media (max-width: 360px) {
     .hero {
-        padding: 60px 10px 30px;
+        min-height: 12vh;
+        padding: 40px 10px 10px;
+    }
+    
+    .hero-text {
+        top: calc(100% + 65px);
     }
     
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .hero h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .profile-pic {
@@ -1469,8 +1521,13 @@ body.dark-mode .cert-conteudo h3 {
         height: 130px;
     }
     
+    /* Zoom máximo em celulares bem pequenos */
+    .profile-pic:hover {
+        transform: scale(1.3);
+    }
+    
     #sobre {
-        margin-top: 90px;
+        margin-top: 130px;
     }
     
     .btn-curriculopt, .btn-curriculoen {
@@ -1581,7 +1638,11 @@ body.dark-mode .cert-conteudo h3 {
 /* ===== ORIENTAÇÃO LANDSCAPE EM MOBILE ===== */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
-        min-height: 60vh;
+        min-height: 30vh;
+    }
+    
+    .hero-text {
+        top: calc(100% + 55px);
     }
     
     .profile-pic {
@@ -1589,12 +1650,8 @@ body.dark-mode .cert-conteudo h3 {
         height: 100px;
     }
     
-    .profile-container {
-        bottom: -30px;
-    }
-    
     #sobre {
-        margin-top: 60px;
+        margin-top: 100px;
     }
     
     #modal-cert-imagem {

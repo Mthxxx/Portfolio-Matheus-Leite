@@ -1082,15 +1082,15 @@ body.dark-mode .cert-conteudo h3 {
         height: auto;
         min-height: 20vh;
         padding-top: 60px;
-        padding-bottom: 20px;
+        padding-bottom: 100px;
+        overflow: visible;
     }
     
-    /* Esconde o texto do hero no mobile - vai aparecer abaixo da foto */
+    /* Texto do hero abaixo da foto */
     .hero-text {
-        position: absolute;
-        top: calc(100% + 100px);
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
+        order: 2;
+        margin-top: 110px;
         width: 100%;
         z-index: 5;
     }
@@ -1106,13 +1106,14 @@ body.dark-mode .cert-conteudo h3 {
     .hero h3 { font-size: 1.1rem; }
 
     .profile-container {
-        position: absolute;
-        bottom: auto;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        bottom: -90px;
+        left: 0;
+        -webkit-transform: none;
+        transform: none;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
+        order: 1;
     }
 
     .profile-pic {
@@ -1124,12 +1125,14 @@ body.dark-mode .cert-conteudo h3 {
     
     /* Aumenta o zoom da foto no mobile */
     .profile-pic:hover {
+        -webkit-transform: scale(1.15);
         transform: scale(1.15);
     }
 
     #sobre {
-        margin-top: 180px;
+        margin-top: 60px;
         padding: 0 15px;
+        padding-top: 20px;
     }
 
     .btn-curriculopt, .btn-curriculoen {
@@ -1261,18 +1264,18 @@ body.dark-mode .cert-conteudo h3 {
     .hero {
         min-height: 18vh;
         padding-top: 50px;
-        padding-bottom: 15px;
+        padding-bottom: 90px;
     }
     
     .hero-text {
-        top: calc(100% + 85px);
+        margin-top: 95px;
     }
     
     .hero h1 { font-size: 1.6rem; }
     .hero h3 { font-size: 1rem; }
     
     .profile-container {
-        transform: translate(-50%, -50%);
+        bottom: -80px;
     }
     
     .profile-pic {
@@ -1282,6 +1285,7 @@ body.dark-mode .cert-conteudo h3 {
     
     /* Zoom maior no mobile */
     .profile-pic:hover {
+        -webkit-transform: scale(1.2);
         transform: scale(1.2);
     }
     
@@ -1295,7 +1299,7 @@ body.dark-mode .cert-conteudo h3 {
     }
     
     #sobre {
-        margin-top: 160px;
+        margin-top: 50px;
         padding: 0 5vw;
     }
     
@@ -1339,15 +1343,19 @@ body.dark-mode .cert-conteudo h3 {
     .hero {
         min-height: 15vh;
         padding-top: 45px;
-        padding-bottom: 10px;
+        padding-bottom: 80px;
     }
     
     .hero-text {
-        top: calc(100% + 75px);
+        margin-top: 85px;
     }
     
     .hero h1 { font-size: 1.5rem; }
     .hero h3 { font-size: 0.95rem; }
+    
+    .profile-container {
+        bottom: -75px;
+    }
     
     .profile-pic {
         width: 150px;
@@ -1356,10 +1364,11 @@ body.dark-mode .cert-conteudo h3 {
     
     /* Zoom ainda maior em celulares pequenos */
     .profile-pic:hover {
+        -webkit-transform: scale(1.25);
         transform: scale(1.25);
     }
     
-    #sobre { margin-top: 150px; }
+    #sobre { margin-top: 40px; }
     
     .tech-item {
         width: 80px;
@@ -1501,11 +1510,11 @@ body.dark-mode .cert-conteudo h3 {
 @media (max-width: 360px) {
     .hero {
         min-height: 12vh;
-        padding: 40px 10px 10px;
+        padding: 40px 10px 70px;
     }
     
     .hero-text {
-        top: calc(100% + 65px);
+        margin-top: 75px;
     }
     
     .hero h1 {
@@ -1516,6 +1525,10 @@ body.dark-mode .cert-conteudo h3 {
         font-size: 0.9rem;
     }
     
+    .profile-container {
+        bottom: -65px;
+    }
+    
     .profile-pic {
         width: 130px;
         height: 130px;
@@ -1523,11 +1536,12 @@ body.dark-mode .cert-conteudo h3 {
     
     /* Zoom máximo em celulares bem pequenos */
     .profile-pic:hover {
+        -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
     
     #sobre {
-        margin-top: 130px;
+        margin-top: 30px;
     }
     
     .btn-curriculopt, .btn-curriculoen {
@@ -1638,11 +1652,16 @@ body.dark-mode .cert-conteudo h3 {
 /* ===== ORIENTAÇÃO LANDSCAPE EM MOBILE ===== */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
-        min-height: 30vh;
+        min-height: 35vh;
+        padding-bottom: 60px;
     }
     
     .hero-text {
-        top: calc(100% + 55px);
+        margin-top: 60px;
+    }
+    
+    .profile-container {
+        bottom: -50px;
     }
     
     .profile-pic {
@@ -1651,7 +1670,7 @@ body.dark-mode .cert-conteudo h3 {
     }
     
     #sobre {
-        margin-top: 100px;
+        margin-top: 30px;
     }
     
     #modal-cert-imagem {

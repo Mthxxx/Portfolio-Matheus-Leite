@@ -220,28 +220,6 @@ h1, h2, h3, .btn-curriculopt, .btn-curriculoen, .tech-item span, .contato-btn, #
     font-size: 0.9rem;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .journey-timeline::before {
-        left: 20px;
-    }
-    
-    .timeline-phase {
-        margin-left: 40px;
-    }
-    
-    .phase-number {
-        width: 40px;
-        height: 40px;
-        left: -50px;
-        font-size: 1rem;
-    }
-    
-    .phase-memories, .phase-learning, .current-focus {
-        flex-direction: column;
-    }
-}
-
 .language-switcher {
     position: absolute;
     top: 30px;
@@ -345,7 +323,7 @@ h1, h2, h3, .btn-curriculopt, .btn-curriculoen, .tech-item span, .contato-btn, #
 
 #tecnologias {
     padding: 60px 20px;
-    background: #00000;
+    background: var(--cor-fundo);
     overflow: hidden;
 }
 
@@ -639,53 +617,6 @@ h1, h2, h3, .btn-curriculopt, .btn-curriculoen, .tech-item span, .contato-btn, #
     text-align: justify;
 }
 
-@media (max-width: 768px) {
-    .modal-projeto-conteudo {
-        width: 98%;
-        max-height: 95vh;
-    }
-    
-    .modal-info {
-        padding: 20px;
-        gap: 20px;
-    }
-    
-    .modal-texto h2 {
-        font-size: 1.8rem;
-    }
-    
-    .galeria-projeto {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 8px;
-    }
-    
-    .galeria-projeto img {
-        height: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .fechar-modal {
-        width: 38px;
-        height: 38px;
-        font-size: 24px;
-        top: 15px;
-        right: 15px;
-    }
-    
-    .modal-info {
-        padding: 15px;
-    }
-    
-    .modal-texto h2 {
-        font-size: 1.5rem;
-    }
-    
-    .modal-texto p {
-        font-size: 0.95rem;
-    }
-}
-
 /* ===== MODO ESCURO ===== */
 body.dark-mode .modal-projeto-conteudo {
     background: #2d2d2d;
@@ -733,26 +664,6 @@ body.dark-mode .modal-conteudo h2 {
 
 body.dark-mode .modal-conteudo p {
     color: #cccccc;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .projetos-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .modal-projeto {
-        margin: 10px;
-    }
-    
-    .modal-conteudo {
-        padding: 20px;
-    }
-    
-    .galeria-projeto {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
 }
 
 #projetos {
@@ -870,249 +781,6 @@ body.dark-mode #theme-btn img {
 #contato { animation-delay: 0.9s; }
 footer { animation-delay: 1.1s; }
 
-@media (max-width: 1024px) {
-    .hero h1 { font-size: 2.8rem; }
-    .profile-pic { width: 280px; height: 280px; }
-    #sobre { margin-top: 160px; }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        align-items: center;
-        height: auto;
-        min-height: 35vh;
-        padding-top: 80px;
-        padding-bottom: 60px;
-    }
-    
-    .hero h1, .hero h3 {
-        color: var(--cor-branca);
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero h1 { font-size: 2.2rem; margin-top: 15px; }
-    .hero h3 { font-size: 1.2rem; }
-
-    .profile-container {
-        bottom: -80px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 20px;
-    }
-
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-        max-width: 90vw;
-        border-width: 4px;
-    }
-
-    #sobre {
-        margin-top: 140px;
-        padding: 0 15px;
-    }
-
-    .btn-curriculopt, .btn-curriculoen {
-        width: 100%;
-        max-width: 320px;
-    }
-    
-    .contato-btn {
-        width: 100%;
-        max-width: 320px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 { font-size: 1.8rem; }
-    
-    .profile-container {
-        bottom: -70px;
-    }
-    
-    .profile-pic {
-        width: 160px;
-        height: 160px;
-    }
-    
-    #sobre { margin-top: 110px; }
-    
-    .tech-item {
-        width: 80px;
-        height: 80px;
-        padding: 8px;
-    }
-    
-    .tech-item span { font-size: 0.75rem; }
-    
-    .tech-item img { width: 30px; height: 30px; }
-    
-    footer p {
-        word-break: break-word;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .marquee-content { animation-play-state: paused; }
-}
-
-@media (max-width: 768px) {
-    .language-switcher {
-        top: 20px;
-        right: 20px;
-    }
-    
-    .theme-switcher {
-        top: 20px;
-        right: 70px;
-    }
-    
-    #theme-btn img {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-/* ===== RESPONSIVIDADE EXTRA ===== */
-
-/* Header/Hero/Profile */
-@media (max-width: 600px) {
-  .profile-container {
-    bottom: -40px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-    aspect-ratio: 1/1;
-  }
-  .language-switcher,
-  .theme-switcher {
-    top: 10px;
-    right: 10px;
-  }
-  .theme-switcher {
-    right: 60px;
-  }
-}
-
-/* Seção Sobre */
-#sobre p {
-  max-width: 90vw;
-}
-@media (max-width: 600px) {
-  #sobre {
-    margin-top: 80px;
-    padding: 0 5vw;
-  }
-}
-
-/* Storytelling/Jornada */
-@media (max-width: 480px) {
-  .journey-timeline {
-    padding-left: 0;
-  }
-  .timeline-phase {
-    margin-left: 10px;
-    padding: 15px;
-  }
-  .phase-number {
-    left: -30px;
-    width: 30px;
-    height: 30px;
-    font-size: .8rem;
-    top: 15px;
-  }
-}
-
-/* Marquee (Tecnologias/Ferramentas) */
-@media (max-width: 480px) {
-  .tech-item {
-    width: 60px;
-    height: 60px;
-    padding: 4px;
-  }
-  .tech-item img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Contato */
-@media (max-width: 480px) {
-  .contato-btn {
-    font-size: .9rem;
-    padding: 10px 8px;
-    min-width: unset;
-  }
-}
-
-/* Projetos */
-@media (max-width: 480px) {
-  .projeto-imagem {
-    height: 120px;
-  }
-  .modal-projeto {
-    max-width: 98vw;
-    max-height: 90vh;
-    margin: 0 auto;
-  }
-  .modal-conteudo {
-    padding: 10px;
-  }
-  .galeria-projeto img {
-    height: 60px;
-  }
-}
-
-/* Footer */
-footer p,
-footer a {
-  word-break: break-word;
-}
-@media (max-width: 480px) {
-  footer {
-    font-size: .8rem;
-    padding: 20px 5vw;
-  }
-}
-
-/* Ajustes gerais para telas muito grandes (ultrawide) */
-@media (min-width:1600px) {
-  .journey-timeline,
-  .projetos-grid {
-    max-width:1400px;
-  }
-  #sobre p {
-    max-width:1000px;
-  }
-}
-
-/* Ajuste para botões de idioma/tema não se sobreporem em telas pequenas */
-@media (max-width:768px) {
-  .language-switcher { top:20px; right:20px; }
-  .theme-switcher { top:20px; right:70px; }
-}
-
-/* Acessibilidade extra */
-.projeto-card { outline:none; }
-.projeto-card[tabindex="0"]:focus { box-shadow:0 0 0 3px #667eea; }
-
-/* Garante que modais nunca estourem a tela */
-.modal-projeto { box-sizing:border-box; }
-
-/* Pausa marquee se usuário interagir no mobile */
-@media (pointer:coarse) {
-  .marquee-content:hover,
-  .marquee-content:active {
-    animation-play-state: paused !important;
-    cursor:pointer;
-  }
-}
-
 /* ===== MODAL CONTATO ===== */
 #modal-contato {
     position: fixed;
@@ -1223,14 +891,6 @@ footer a {
     background: rgba(0,0,0,0.3);
 }
 
-/* Responsivo */
-@media (max-width:600px) {
-  .modal-contato {
-      max-width:98vw; padding:20px 8vw 20px 8vw;
-      font-size:.98rem;
-  }
-}
-
 /* Modo escuro */
 body.dark-mode #modal-contato .modal-contato {
    background:#232323; color:#fff; 
@@ -1260,108 +920,6 @@ body.dark-mode #modal-contato .fechar-modal { color:#9D4EDD; }
 @keyframes spinContato {
   to { transform: rotate(360deg); }
 }
-
-/* ===== MODAL CONTATO RESPONSIVO ===== */
-#modal-contato {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(5px);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 2000;
-  opacity: 0; visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  padding: 2vw;
-}
-#modal-contato.active {
-  opacity: 1; visibility: visible;
-}
-.modal-contato {
-  background: var(--cor-branca);
-  color: var(--cor-texto-principal);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  max-width: 420px;
-  width: 100%;
-  min-width: 0;
-  padding: 40px 30px 30px 30px;
-  position: relative;
-  animation: fadeInUp 0.4s;
-}
-#modal-contato h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: var(--cor-primaria-escura);
-}
-#form-contato {
-  display: flex; flex-direction: column; gap: 15px;
-}
-#form-contato label {
-  text-align: left; font-weight: bold; color: var(--cor-texto-principal);
-}
-#form-contato input, #form-contato textarea {
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1.5px solid #adb5bd;
-  font-size: 1rem;
-  background: #f8f9fa;
-  color: #212529;
-  transition: border-color .2s;
-}
-#form-contato input:focus, #form-contato textarea:focus {
-  border-color: var(--cor-primaria-escura);
-  outline: none;
-}
-#form-contato textarea {
-  resize: vertical; min-height: 60px;
-}
-.btn-enviar-contato {
-  margin-top: 10px; padding: 12px 0;
-  background: var(--cor-primaria-escura);
-  color: var(--cor-branca);
-  border-radius: 8px; border: none;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem; font-weight: bold;
-  cursor: pointer;
-  transition: background .3s, transform .2s;
-}
-.btn-enviar-contato:hover {
-  background: var(--cor-amarelo-hover); color: #fff; transform: translateY(-2px) scale(1.03);
-}
-#modal-contato .fechar-modal {
-  position: absolute; top:18px; right:18px;
-  background: rgba(0,0,0,0.15); color: var(--cor-primaria-escura);
-  border-radius:50%; border:none; width:36px; height:36px; font-size:1.6rem;
-  cursor:pointer; display:flex; align-items:center; justify-content:center;
-}
-#modal-contato .fechar-modal:hover { background: rgba(0,0,0,0.3); }
-
-/* Responsividade para tablets e celulares */
-@media (max-width:900px) {
-    .modal-contato { max-width:95vw; padding-left:5vw; padding-right:5vw;}
-}
-@media (max-width:600px) {
-    .modal-contato { max-width:98vw; padding-left:4vw; padding-right:4vw; font-size:.98rem;}
-    #modal-contato h2 { font-size:1.4rem;}
-    #form-contato input, #form-contato textarea { font-size:.98rem;}
-    #modal-contato .fechar-modal { width:32px;height:32px;font-size:1.3rem;}
-}
-@media (max-width:400px) {
-    .modal-contato { padding-left:2vw; padding-right:2vw;}
-    #form-contato label { font-size:.95rem;}
-}
-
-/* Modo escuro */
-body.dark-mode #modal-contato .modal-contato { background:#232323; color:#fff;}
-body.dark-mode #modal-contato label { color:#fff;}
-body.dark-mode #modal-contato input, body.dark-mode #modal-contato textarea { background:#181818; color:#fff; border-color:#444;}
-body.dark-mode #modal-contato input::placeholder, body.dark-mode #modal-contato textarea::placeholder { color:#aaa;}
-body.dark-mode #modal-contato h2 { color:#9D4EDD;}
-body.dark-mode .btn-enviar-contato { background:#9D4EDD;}
-body.dark-mode .btn-enviar-contato:hover { background:#10a37f;}
-body.dark-mode #modal-contato .fechar-modal { color:#9D4EDD;}
 
 /* ===== SEÇÃO CERTIFICAÇÕES ===== */
 #certificacoes {
@@ -1483,7 +1041,7 @@ body.dark-mode #modal-contato .fechar-modal { color:#9D4EDD;}
   transform: rotate(90deg);
 }
 
-/* ===== MODO ESCURO ===== */
+/* ===== MODO ESCURO CERTIFICAÇÕES ===== */
 body.dark-mode .cert-card {
   background: #2d2d2d;
   border: 1px solid #404040;
@@ -1493,172 +1051,557 @@ body.dark-mode .cert-conteudo h3 {
   color: #ffffff;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ==========================================================================
+   RESPONSIVIDADE COMPLETA
+   ========================================================================== */
 
-/* 📱 Tablets grandes (1024px - 768px) */
+/* ===== TELAS MUITO GRANDES (1600px+) ===== */
+@media (min-width: 1600px) {
+    .journey-timeline,
+    .projetos-grid,
+    .certificacoes-grid {
+        max-width: 1400px;
+    }
+    #sobre p {
+        max-width: 1000px;
+    }
+}
+
+/* ===== LAPTOPS (1024px - 1599px) ===== */
 @media (max-width: 1024px) {
-  .certificacoes-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-  
-  #certificacoes h2 {
-    font-size: 1.8rem;
-  }
+    .hero h1 { font-size: 2.8rem; }
+    .profile-pic { width: 280px; height: 280px; }
+    #sobre { margin-top: 160px; }
 }
 
-/* 📱 Tablets pequenos (768px - 600px) */
+/* ===== TABLETS (768px - 1023px) ===== */
 @media (max-width: 768px) {
-  #certificacoes {
-    padding: 40px 15px;
-  }
-  
-  .certificacoes-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .cert-imagem {
-    height: 180px;
-  }
-  
-  .cert-conteudo h3 {
-    font-size: 1.2rem;
-  }
-  
-  #modal-cert-imagem {
-    max-width: 95vw;
-    max-height: 85vh;
-  }
-  
-  #modal-cert .fechar-modal {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    top: -10px;
-    right: -10px;
-  }
+    /* Hero */
+    .hero {
+        align-items: center;
+        height: auto;
+        min-height: 35vh;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    
+    .hero h1, .hero h3 {
+        color: var(--cor-branca);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero h1 { font-size: 2.2rem; margin-top: 15px; }
+    .hero h3 { font-size: 1.2rem; }
+
+    .profile-container {
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        max-width: 90vw;
+        border-width: 4px;
+    }
+
+    #sobre {
+        margin-top: 140px;
+        padding: 0 15px;
+    }
+
+    .btn-curriculopt, .btn-curriculoen {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .contato-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    /* Botões tema/idioma */
+    .language-switcher {
+        top: 20px;
+        right: 20px;
+    }
+    
+    .theme-switcher {
+        top: 20px;
+        right: 70px;
+    }
+    
+    #theme-btn img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* Timeline */
+    .journey-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-phase {
+        margin-left: 40px;
+    }
+    
+    .phase-number {
+        width: 40px;
+        height: 40px;
+        left: -50px;
+        font-size: 1rem;
+    }
+    
+    .phase-memories, .phase-learning, .current-focus, .future-vision {
+        flex-direction: column;
+    }
+    
+    /* Projetos */
+    .projetos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modal-projeto {
+        margin: 10px;
+    }
+    
+    .modal-conteudo {
+        padding: 20px;
+    }
+    
+    .galeria-projeto {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    /* Modal Projetos */
+    .modal-projeto-conteudo {
+        width: 98%;
+        max-height: 95vh;
+    }
+    
+    .modal-info {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .modal-texto h2 {
+        font-size: 1.8rem;
+    }
+    
+    .galeria-projeto {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .galeria-projeto img {
+        height: 70px;
+    }
+    
+    /* Certificações */
+    .certificacoes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cert-imagem {
+        height: 180px;
+    }
+    
+    .cert-conteudo h3 {
+        font-size: 1.2rem;
+    }
+    
+    #modal-cert-imagem {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+    
+    #modal-cert .fechar-modal {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        top: -10px;
+        right: -10px;
+    }
+    
+    /* Modal Contato */
+    .modal-contato {
+        max-width: 95vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }
 
-/* 📱 Celulares (600px - 480px) */
+/* ===== CELULARES GRANDES (600px - 767px) ===== */
 @media (max-width: 600px) {
-  #certificacoes h2 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-  }
-  
-  .cert-card {
-    border-radius: 8px;
-  }
-  
-  .cert-imagem {
-    height: 160px;
-  }
-  
-  .cert-conteudo {
-    padding: 15px;
-  }
-  
-  .cert-conteudo h3 {
-    font-size: 1.1rem;
-  }
+    .profile-container {
+        bottom: -40px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        aspect-ratio: 1/1;
+    }
+    .language-switcher,
+    .theme-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    .theme-switcher {
+        right: 60px;
+    }
+    
+    #sobre {
+        margin-top: 80px;
+        padding: 0 5vw;
+    }
+    
+    #sobre p {
+        max-width: 90vw;
+    }
+    
+    .cert-imagem {
+        height: 160px;
+    }
+    
+    .cert-conteudo {
+        padding: 15px;
+    }
+    
+    .cert-conteudo h3 {
+        font-size: 1.1rem;
+    }
+    
+    .modal-contato {
+        max-width: 98vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        font-size: .98rem;
+    }
+    #modal-contato h2 {
+        font-size: 1.4rem;
+    }
+    #form-contato input, #form-contato textarea {
+        font-size: .98rem;
+    }
+    #modal-contato .fechar-modal {
+        width: 32px;
+        height: 32px;
+        font-size: 1.3rem;
+    }
 }
 
-/* 📱 Celulares pequenos (< 480px) */
+/* ===== CELULARES (480px - 599px) ===== */
 @media (max-width: 480px) {
-  #certificacoes {
-    padding: 30px 10px;
-  }
-  
-  #certificacoes h2 {
-    font-size: 1.4rem;
-  }
-  
-  .certificacoes-grid {
-    gap: 15px;
-  }
-  
-  .cert-imagem {
-    height: 140px;
-  }
-  
-  .cert-conteudo {
-    padding: 12px;
-  }
-  
-  .cert-conteudo h3 {
-    font-size: 1rem;
-  }
-  
-  #modal-cert {
-    padding: 10px;
-  }
-  
-  #modal-cert-imagem {
-    max-width: 98vw;
-    max-height: 80vh;
-    border-radius: 8px;
-  }
-  
-  #modal-cert .fechar-modal {
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-    top: -8px;
-    right: -8px;
-  }
+    .hero h1 { font-size: 1.8rem; }
+    
+    .profile-container {
+        bottom: -70px;
+    }
+    
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+    }
+    
+    #sobre { margin-top: 110px; }
+    
+    .tech-item {
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+    }
+    
+    .tech-item span { font-size: 0.75rem; }
+    
+    .tech-item img { width: 30px; height: 30px; }
+    
+    /* Timeline */
+    .journey-section {
+        padding: 30px 15px;
+    }
+    
+    .journey-timeline {
+        padding-left: 0;
+    }
+    .timeline-phase {
+        margin-left: 10px;
+        padding: 15px;
+    }
+    .phase-number {
+        left: -30px;
+        width: 30px;
+        height: 30px;
+        font-size: .8rem;
+        top: 15px;
+    }
+    
+    /* Contato */
+    .contato-btn {
+        font-size: .9rem;
+        padding: 10px 8px;
+        min-width: unset;
+    }
+    
+    /* Projetos */
+    .projeto-imagem {
+        height: 120px;
+    }
+    .modal-projeto {
+        max-width: 98vw;
+        max-height: 90vh;
+        margin: 0 auto;
+    }
+    .modal-conteudo {
+        padding: 10px;
+    }
+    .galeria-projeto img {
+        height: 60px;
+    }
+    
+    /* Modal Projetos */
+    .fechar-modal {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .modal-info {
+        padding: 15px;
+    }
+    
+    .modal-texto h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-texto p {
+        font-size: 0.95rem;
+    }
+    
+    /* Certificações */
+    #certificacoes {
+        padding: 30px 10px;
+    }
+    
+    #certificacoes h2 {
+        font-size: 1.4rem;
+    }
+    
+    .certificacoes-grid {
+        gap: 15px;
+    }
+    
+    .cert-imagem {
+        height: 140px;
+    }
+    
+    .cert-conteudo {
+        padding: 12px;
+    }
+    
+    .cert-conteudo h3 {
+        font-size: 1rem;
+    }
+    
+    #modal-cert {
+        padding: 10px;
+    }
+    
+    #modal-cert-imagem {
+        max-width: 98vw;
+        max-height: 80vh;
+        border-radius: 8px;
+    }
+    
+    #modal-cert .fechar-modal {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        top: -8px;
+        right: -8px;
+    }
+    
+    /* Modal Contato */
+    .modal-contato {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    #form-contato label {
+        font-size: .95rem;
+    }
+    
+    /* Footer */
+    footer p {
+        word-break: break-word;
+    }
+    footer {
+        font-size: .8rem;
+        padding: 20px 5vw;
+    }
 }
 
-/* 📱 Celulares muito pequenos (< 360px) */
+/* ===== CELULARES PEQUENOS (< 360px) ===== */
 @media (max-width: 360px) {
-  .cert-imagem {
-    height: 120px;
-  }
-  
-  .cert-conteudo h3 {
-    font-size: 0.95rem;
-  }
+    .hero {
+        padding: 60px 10px 30px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero h3 {
+        font-size: 1rem;
+    }
+    
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+    
+    #sobre {
+        margin-top: 90px;
+    }
+    
+    .btn-curriculopt, .btn-curriculoen {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+        min-width: unset;
+    }
+    
+    .tech-item {
+        width: 65px;
+        height: 65px;
+        padding: 6px;
+        margin: 0 5px;
+    }
+    
+    .tech-item img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .tech-item span {
+        font-size: 0.65rem;
+    }
+    
+    .journey-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .journey-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .phase-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .phase-content p {
+        font-size: 0.9rem;
+    }
+    
+    .memory, .skill, .focus-item, .vision-pill {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+    
+    .cert-imagem {
+        height: 120px;
+    }
+    
+    .cert-conteudo h3 {
+        font-size: 0.95rem;
+    }
+    
+    #projetos h2, #contato h2, #tecnologias h2, #certificacoes h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contato-btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .contato-btn img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-/* 🖥️ Telas grandes (> 1440px) */
-@media (min-width: 1440px) {
-  .certificacoes-grid {
-    max-width: 1400px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-  
-  .cert-imagem {
-    height: 220px;
-  }
+/* ===== ACESSIBILIDADE ===== */
+@media (prefers-reduced-motion: reduce) {
+    .marquee-content { animation-play-state: paused; }
+    
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
-/* 🖥️ Telas ultrawide (> 1920px) */
-@media (min-width: 1920px) {
-  .certificacoes-grid {
-    max-width: 1600px;
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* Pausa marquee se usuário interagir no mobile */
+@media (pointer:coarse) {
+    .marquee-content:hover,
+    .marquee-content:active {
+        animation-play-state: paused !important;
+        cursor: pointer;
+    }
 }
 
-/* 🎯 Ajuste para hover em touch devices */
+/* Ajuste para hover em touch devices */
 @media (hover: none) {
-  .cert-card:hover {
-    transform: none;
-  }
-  
-  .cert-card:active {
-    transform: scale(0.98);
-  }
+    .cert-card:hover,
+    .projeto-card:hover {
+        transform: none;
+    }
+    
+    .cert-card:active,
+    .projeto-card:active {
+        transform: scale(0.98);
+    }
 }
 
-/* 🔄 Ajuste para orientação landscape em mobile */
+/* Foco para acessibilidade */
+.projeto-card { outline:none; }
+.projeto-card[tabindex="0"]:focus { box-shadow:0 0 0 3px #667eea; }
+
+/* Garante que modais nunca estourem a tela */
+.modal-projeto { box-sizing:border-box; }
+
+/* ===== ORIENTAÇÃO LANDSCAPE EM MOBILE ===== */
 @media (max-width: 768px) and (orientation: landscape) {
-  #modal-cert-imagem {
-    max-height: 75vh;
-  }
-  
-  .cert-imagem {
-    height: 150px;
-  }
+    .hero {
+        min-height: 60vh;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-container {
+        bottom: -30px;
+    }
+    
+    #sobre {
+        margin-top: 60px;
+    }
+    
+    #modal-cert-imagem {
+        max-height: 75vh;
+    }
+    
+    .cert-imagem {
+        height: 150px;
+    }
 }

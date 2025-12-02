@@ -322,11 +322,11 @@
     <h2 data-lang="certs-title">Certificações</h2>
     <div class="certificacoes-grid">
         
-        <!-- Card 1 -->
+        <!-- Card 1 - Alura -->
         <div class="cert-card" data-cert="1">
-            <img src="assets/certificados/certificado.jpg" alt="Certificado 1" class="cert-imagem">
+            <img src="assets/certificados/alura_logo.jpg" alt="Cursos Alura" class="cert-imagem">
             <div class="cert-conteudo">
-                <h3 data-lang="cert1-title">Em Breve</h3>
+                <h3 data-lang="cert1-title">Cursos Alura</h3>
             </div>
         </div>
 
@@ -353,7 +353,20 @@
 <div class="modal-overlay" id="modal-cert">
     <div class="modal-cert-conteudo">
         <button class="fechar-modal" onclick="fecharModalCert()">&times;</button>
-        <img src="" alt="Certificado" id="modal-cert-imagem">
+        
+        <div class="modal-info">
+            <!-- Coluna da Imagem + Galeria -->
+            <div class="modal-imagem-container">
+                <img src="" alt="Certificado" id="modal-cert-imagem" class="modal-imagem-principal">
+                <div id="modal-cert-galeria" class="galeria-projeto"></div>
+            </div>
+
+            <!-- Coluna do Texto -->
+            <div class="modal-texto">
+                <h2 id="modal-cert-titulo">Título do Certificado</h2>
+                <p id="modal-cert-descricao">Descrição dos certificados.</p>
+            </div>
+        </div>
     </div>
 </div>
 

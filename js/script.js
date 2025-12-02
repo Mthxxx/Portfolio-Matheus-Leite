@@ -44,9 +44,12 @@ const translations = {
         // card certificações
 
         "certs-title": "Certificações",
-        "cert1-title": "Em Breve",
+        "cert1-title": "Cursos Alura",
+        "cert1-desc": "Certificados de cursos concluídos na plataforma Alura, abrangendo diversas tecnologias e áreas da programação.",
         "cert2-title": "Em Breve",
+        "cert2-desc": "Novos certificados em breve...",
         "cert3-title": "Em Breve",
+        "cert3-desc": "Novos certificados em breve...",
 
 
         // "journey-header: Minha Jornada Além do Código:<br>Como a Curiosidade Moldou Minha Carreira Tech.",
@@ -140,9 +143,12 @@ const translations = {
         // card certificações
 
         "certs-title": "Certifications",
-        "cert1-title": "Coming Soon",
+        "cert1-title": "Alura Courses",
+        "cert1-desc": "Certificates from courses completed on the Alura platform, covering various technologies and programming areas.",
         "cert2-title": "Coming Soon",
+        "cert2-desc": "New certificates coming soon...",
         "cert3-title": "Coming Soon",
+        "cert3-desc": "New certificates coming soon...",
 
         "projects-title": "Projects",
         "proj1-title": "MTclicker",
@@ -383,6 +389,12 @@ function trocarIdioma() {
     if (modal && modal.classList.contains('active') && window.projetoModalAberto) {
         abrirModal(window.projetoModalAberto);
     }
+
+    // Atualiza modal de certificados se estiver aberto
+    const modalCert = document.getElementById('modal-cert');
+    if (modalCert && modalCert.classList.contains('active') && window.certModalAberto) {
+        abrirModalCert(window.certModalAberto);
+    }
 }
 
 // ===== FUNÇÃO PARA TROCAR TEMA =====
@@ -593,15 +605,28 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== DADOS DOS CERTIFICADOS =====
 const certificadosData = {
     1: {
-        imagem: "assets/certificados/certificado.jpg"
+        imagem: "assets/certificados/alura_java.jpg",
+        galeria: [
+            "assets/certificados/alura_java.jpg",
+            "assets/certificados/alura_ia.jpg"
+        ]
     },
     2: {
-        imagem: "assets/certificados/certificado.jpg"
+        imagem: "assets/certificados/certificado.jpg",
+        galeria: [
+            "assets/certificados/certificado.jpg"
+        ]
     },
     3: {
-        imagem: "assets/certificados/certificado.jpg"
+        imagem: "assets/certificados/certificado.jpg",
+        galeria: [
+            "assets/certificados/certificado.jpg"
+        ]
     }
 };
+
+// ===== VARIÁVEL GLOBAL PARA MODAL DE CERTIFICADOS =====
+window.certModalAberto = null;
 
 // ===== FUNÇÃO PARA ABRIR MODAL (CERTIFICADOS) =====
 function abrirModalCert(certId) {
@@ -615,14 +640,37 @@ function abrirModalCert(certId) {
 
     const modal = document.getElementById('modal-cert');
     const modalImagem = document.getElementById('modal-cert-imagem');
+    const modalTitulo = document.getElementById('modal-cert-titulo');
+    const modalDescricao = document.getElementById('modal-cert-descricao');
+    const modalGaleria = document.getElementById('modal-cert-galeria');
 
-    if (!modal || !modalImagem) {
+    if (!modal || !modalImagem || !modalTitulo || !modalDescricao || !modalGaleria) {
         console.error("❌ Elementos do modal de certificado não encontrados!");
         return;
     }
 
+    // Define imagem principal
     modalImagem.src = cert.imagem;
-    modalImagem.alt = `Certificado ${id}`;
+    modalImagem.alt = translations[currentLang][`cert${id}-title`] || "Certificado";
+
+    // Define título e descrição usando traduções
+    modalTitulo.textContent = translations[currentLang][`cert${id}-title`] || "Título do Certificado";
+    modalDescricao.innerHTML = translations[currentLang][`cert${id}-desc`] || "Descrição do certificado";
+
+    // Preenche galeria
+    modalGaleria.innerHTML = '';
+    cert.galeria.forEach((imagemSrc, index) => {
+        const img = document.createElement('img');
+        img.src = imagemSrc;
+        img.alt = `${translations[currentLang][`cert${id}-title`]} - Certificado ${index + 1}`;
+        img.onclick = () => {
+            modalImagem.src = imagemSrc;
+        };
+        modalGaleria.appendChild(img);
+    });
+
+    // Salva qual certificado está aberto
+    window.certModalAberto = id;
 
     modal.classList.add('active');
     document.body.classList.add('body-blur');
@@ -634,6 +682,7 @@ function fecharModalCert() {
     if (modal) {
         modal.classList.remove('active');
         document.body.classList.remove('body-blur');
+        window.certModalAberto = null;
     }
 }
 
